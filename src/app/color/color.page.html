@@ -1,0 +1,32 @@
+<ion-content [style.--background]="bgColor">
+  
+  <div class="container ion-padding">
+
+    <h2>Controle de Cores</h2>
+
+    <ion-item>
+      <ion-label>R</ion-label>
+      <ion-range min="0" max="255" [(ngModel)]="r"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>G</ion-label>
+      <ion-range min="0" max="255" [(ngModel)]="g"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>B</ion-label>
+      <ion-range min="0" max="255" [(ngModel)]="b"></ion-range>
+    </ion-item>
+
+    <ion-button expand="full" [style.--background]="btnColor" (click)="mudarCorBotao()">
+      Botão 1 (muda cor)
+    </ion-button>
+
+    <ion-button expand="full" (click)="mudarFundo()">
+      Botão 2 (muda fundo)
+    </ion-button>
+
+  </div>
+
+</ion-content>

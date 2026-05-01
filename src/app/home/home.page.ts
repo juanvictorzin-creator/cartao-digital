@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, RouterModule],
+  imports: [IonicModule, CommonModule],
 })
-export class HomePage {}
+export class HomePage {
+
+  constructor(private router: Router) {}
+
+  irParaColor() {
+    this.router.navigate(['/color']);
+  }
+
+}     
